@@ -1,0 +1,16 @@
+.nav {
+  text-align: center;
+  padding: 30px;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.nav :global(a) {
+  font-weight: 700;
+  color: #2c3e50;
+  text-decoration: none;
+}
+
+.nav :global(a.router-link-exact-active) {
+  color: #0239d0;
+}

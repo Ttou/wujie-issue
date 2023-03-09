@@ -1,0 +1,31 @@
+{
+  "name": "wujie-issue",
+  "scripts": {
+    "dev": "pnpm -r dev",
+    "dev:main": "pnpm --filter app-main dev",
+    "dev:vue2": "pnpm --filter app-vue2 dev",
+    "dev:vue3": "pnpm --filter app-vue3 dev",
+    "commit": "git add . && git cz",
+    "preinstall": "npx only-allow pnpm",
+    "postinstall": "npx simple-git-hooks"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.0",
+    "@commitlint/config-conventional": "^17.0.0",
+    "@ttou/define-config": "^2.1.1",
+    "commitizen": "^4.2.4",
+    "concurrently": "^7.6.0",
+    "cz-customizable": "^7.0.0",
+    "lint-staged": "^12.0.0",
+    "simple-git-hooks": "^2.8.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-customizable"
+    }
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged",
+    "commit-msg": "npx commitlint --edit $1"
+  }
+}

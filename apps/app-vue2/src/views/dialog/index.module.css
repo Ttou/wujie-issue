@@ -1,0 +1,14 @@
+.view {
+}
+
+.content {
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+.content :global(h3) {
+  margin: 20px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eaecef;
+  font-weight: 600;
+}
